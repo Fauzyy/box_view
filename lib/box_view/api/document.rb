@@ -19,7 +19,7 @@ module BoxView
       end
 
       def upload(url, name)
-        data_item(session.post(endpoint_url, { url: url, name: name }.to_json), session)
+        data_item(session.post(endpoint_url, { url: url, name: name, non_svg: "true" }.to_json), session)
       end
 
       def thumbnail(id, width, height)
