@@ -18,8 +18,8 @@ module BoxView
         raise NotImplementedError
       end
 
-      def upload(url, name)
-        data_item(session.post(endpoint_url, { url: url, name: name, non_svg: true }.to_json), session)
+      def upload(url, name, svg)
+        data_item(session.post(endpoint_url, { url: url, name: name, non_svg: svg }.to_json), session)
       end
 
       def thumbnail(id, width, height)
